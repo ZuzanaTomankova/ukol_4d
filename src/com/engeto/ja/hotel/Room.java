@@ -12,11 +12,7 @@ public class Room {
     @Override
     public String toString() {
         return  "("+
-                "number:" + number +
-                ", numberOfBed:" + numberOfBed +
-                ", balcony:" + balcony +
                 ", seaViews:" + seaViews +
-                ", price:" + price +
                 ')';
     }
 

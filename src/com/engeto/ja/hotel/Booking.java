@@ -1,6 +1,9 @@
 package com.engeto.ja.hotel;
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAmount;
 
 public class Booking {
 
@@ -28,7 +31,8 @@ public class Booking {
                 ", guest:" + guest +
                 ", startOfStay:" + startOfStay +
                 ", endOfStay:" + endOfStay +
-                ", businessStay:'" + businessStay + '\'' +
+
+                '\'' +
                 ')';
     }
 
@@ -73,4 +77,12 @@ public class Booking {
         this.guest = guest;
     }
     //endregion
+
+    public void stays (LocalDate startOfStay,LocalDate endOfStay){
+    TemporalAmount stay = Period.between(startOfStay, endOfStay);
+    int    stays = (int)stay.get(ChronoUnit.DAYS);
+        System.out.println("Délka pobytu:" + stays);
+    }
+
+
 }

@@ -18,6 +18,19 @@ public class BookingManager {
     public List<Booking> getBookings() {
         return new ArrayList<>(bookingList);
     }
-}
+
+    public void clearBookings(Booking booking){
+        bookingList.clear();
+    }
+
+    public void getNumberOfWorkingBookings(Booking booking){
+        bookingList.size();
+    }
+
+    public void getAverageGuests(Booking booking){
+
+    }
 
 }
+
+

@@ -17,7 +17,7 @@ public class Guest {
     public String toString() {
         return  "("+
                 "name:'" + name + '\'' +
-                ", birthdate:" + birthdate +
+
                 ')';
     }
 
