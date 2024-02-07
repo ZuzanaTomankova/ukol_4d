@@ -1,5 +1,6 @@
 package com.engeto.ja.hotel;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.temporal.ChronoUnit;
@@ -78,10 +79,10 @@ public class Booking {
     }
     //endregion
 
-    public void stays (LocalDate startOfStay,LocalDate endOfStay){
-    TemporalAmount stay = Period.between(startOfStay, endOfStay);
-    int    stays = (int)stay.get(ChronoUnit.DAYS);
-        System.out.println("Délka pobytu:" + stays);
+    public void getTotalPrice (LocalDate startOfStay,LocalDate endOfStay){
+        long daysBetween = ChronoUnit.DAYS.between(startOfStay, endOfStay);
+        BigDecimal totalPrice = room.getPrice().multiply(BigDecimal.valueOf(daysBetween));
+
     }
 
 
